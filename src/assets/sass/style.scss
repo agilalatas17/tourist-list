@@ -1,0 +1,14 @@
+$primary-font : 'Poppins', sans-serif;
+
+*{
+    margin: 0;
+    font-family: $primary-font;
+}
+
+@import 'login';
+@import 'register';
+@import 'dashboard';
+@import 'navbar';
+@import 'modal';
+@import 'tourist-details';
+@import 'tourist-edit';

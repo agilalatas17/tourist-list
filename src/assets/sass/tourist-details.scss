@@ -1,0 +1,102 @@
+.tourist-detail-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh;
+
+    .tourist-detail-navigation {
+        margin: auto;
+        width: 70%;
+    }
+
+    .tourist-detail-box {
+        margin: auto;
+        width: 70%;
+        min-height: 70vh;
+        padding: 3vh;
+        gap: 20px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tourist-detail {
+            width: 90%;
+            padding: 5vh;
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            align-items: center;
+
+            .image-tourist {
+                padding-right: 10px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .tourist-detail-info {
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.4);
+                border-radius: 15px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3vh;
+                padding: 3vh;
+
+                table{
+                    td{
+                        padding: 2vh;
+                        border-bottom: 1px solid white;
+                    }
+                }
+
+                .detail-button{
+                    display: flex;
+                    gap: 3vh;
+                }
+            }
+        }
+    }
+
+    .modal-content-dialog {
+        padding: 5vh;
+        display: flex;
+        gap: 3vh;
+        flex-direction: column;
+        align-items: center;
+
+        .modal-footer {
+            display: flex;
+            gap: 5vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .tourist-detail-container {
+            padding: 0 !important;
+            min-height: auto;
+        }
+
+        .tourist-detail-box {
+            width: 90%;
+
+            .tourist-detail-info{
+                width: 100%;
+
+                table{
+                    td{
+                        padding: 1vh !important;
+                    }
+                }
+            }
+        }
+    }
+}

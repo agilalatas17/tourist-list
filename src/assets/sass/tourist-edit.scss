@@ -1,0 +1,98 @@
+.tourist-edit-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh;
+
+    .tourist-edit-navigation {
+        margin: auto;
+        width: 70%;
+    }
+
+    .tourist-edit-box {
+        margin: auto;
+        width: 70%;
+        min-height: 70vh;
+        padding: 3vh;
+        gap: 20px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tourist-edit {
+            width: 90%;
+            padding: 5vh;
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            align-items: center;
+
+            .image-tourist {
+                padding-right: 10px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            .tourist-edit-info {
+                width: 50%;
+                padding: 3vh;
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.4);
+                border-radius: 15px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 3vh;
+                
+                input{
+                    padding: 1vh;
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .modal-content-dialog {
+        padding: 5vh;
+        display: flex;
+        gap: 3vh;
+        flex-direction: column;
+        align-items: center;
+
+        .modal-footer {
+            display: flex;
+            gap: 5vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .tourist-edit-container {
+            padding: 0 !important;
+            min-height: auto;
+        }
+
+        .tourist-edit-box {
+            width: 90%;
+
+            .tourist-edit{
+                .tourist-edit-info{
+                    width: 100%;
+
+                    input{
+                        padding: 1vh;
+                        border-radius: 5px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
