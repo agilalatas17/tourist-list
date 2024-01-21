@@ -47,6 +47,17 @@ const Login: React.FC = () => {
       }
     } catch (error: unknown) {
       console.error('Error during login:', error);
+
+      if (axios.isAxiosError(error)) {
+        // Cek status code untuk menentukan jenis kesalahan
+        if (error.response?.status === 401) {
+          setError('Email atau password salah. Silakan coba lagi.');
+        } else {
+          setError('Email atau password salah. Silakan coba lagi.');
+        }
+      } else {
+        setError('Terjadi kesalahan saat melakukan login. Silakan coba lagi.');
+      }
     }
   };
 
