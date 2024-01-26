@@ -1,7 +1,7 @@
 import '../../assets/sass/style.scss';
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setAuthData } from '../../redux/authSlice';
 import body from '../../assets/image/body-login.png';
@@ -17,6 +17,9 @@ const Login: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const navigasi = useNavigate();
   const dispatch = useDispatch();
+  let lokasi = useLocation() 
+
+  console.log('lokasi saat ini', lokasi)
 
   const handleLogin = async () => {
     try {

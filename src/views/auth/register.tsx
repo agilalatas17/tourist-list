@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setName, setEmail, setPassword, setShowPassword } from '../../redux/registerSlice';
 import { RootState } from '../../redux/store';
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import '../../assets/sass/style.scss';
 import body from '../../assets/image/body-login.png';
 import animaton from '../../assets/image/register-animation.png';
@@ -15,6 +15,9 @@ const Register: React.FC = () => {
     const { name, email, password, showPassword } = useSelector((state: RootState) => state.register);
     const navigasi = useNavigate();
     const [error, setError] = useState<string | null>(null);
+    let lokasi = useLocation();
+
+    console.log('lokasi saat ini', lokasi)
 
     const handleRegister = async () => {
         try {
